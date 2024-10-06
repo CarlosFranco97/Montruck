@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  padding: 15px 7%;
+  width: 100%;
+  background: #f3f4f6;
+}
+.pages {
+  margin-left: 30%;
+}
+.nav-title {
+  font-family: system-ui;
+  font-weight: bold;
+  font-size: 2rem;
+  text-align: left;
+}

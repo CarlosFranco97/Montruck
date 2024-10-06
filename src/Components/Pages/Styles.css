@@ -1,0 +1,6 @@
+/* Dashboard.css */
+.page-container {
+  background-color: #f3f4f6;
+  min-height: 100vh; /* Asegúrate de que el fondo cubra toda la pantalla */
+  padding: 20px;
+}

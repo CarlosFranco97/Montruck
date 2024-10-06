@@ -1,0 +1,49 @@
+.card-progress {
+  height: 110px; /* Ajusta la altura según tus necesidades */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+.card-text {
+  font-family: system-ui;
+  font-size: 1rem;
+  color: #333;
+  font-weight: lighter;
+  text-align: left;
+}
+.card-title {
+  font-family: system-ui;
+  font-size: 1.5rem;
+  color: #333;
+  font-weight: bold;
+  text-align: left;
+}
+.icon-container .fa-oil-can {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.fa-gas-pump {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.fa-gauge {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.fa-gauge-high {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.fa-percent {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}
+.fa-temperature-quarter {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+}

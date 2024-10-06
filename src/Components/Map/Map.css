@@ -1,0 +1,41 @@
+.map-container {
+  background-color: white; /* Color de fondo gris claro */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 0px; /* Espaciado interno */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  margin: 20px auto;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0 0; /* Redondear solo la parte superior */
+  color: #333;
+}
+
+.map-box {
+  position: relative;
+  height: 300px; /* Altura del mapa */
+  background-color: white;
+  border-radius: 0 0 10px 10px; /* Redondear solo la parte inferior */
+}
+
+.coordinates-box {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  z-index: 1000;
+}
+
+.coordinates-box p {
+  margin: 0;
+}

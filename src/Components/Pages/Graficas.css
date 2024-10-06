@@ -1,0 +1,24 @@
+.card-graph {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .card-graph {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card-graph-title {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.date-picker {
+  padding: 20px;
+  margin-left: 40px;
+}
