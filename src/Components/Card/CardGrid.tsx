@@ -30,29 +30,72 @@ interface Sen {
   VEL: string;
 }
 
+/* prueba json */
+interface SenPrueba {
+  _id: string;
+  vehiculo_id: number;
+  datetime: string;
+  Temp1: number;
+  Temp2: number;
+  Temp3: number;
+  Frec: number;
+  Level: number;
+  RPM: string;
+  IDC: string;
+  PAM: string;
+  TR: string;
+  TAM: string;
+  PA: string;
+  PMA: string;
+  VEL: string;
+}
+
+const senPrueba = [{
+  "_id": 89050,
+  "vehiculo_id": 1,
+  "datetime": "2024-07-31T23:35:01.000Z",
+  "Temp1": 1023,
+  "Temp2": 1023,
+  "Temp3": 1023,
+  "Frec": 1873,
+  "Level": 2289,
+  "RPM": "12FB",
+  "IDC": "0017",
+  "PAM": "1D",
+  "TR": "82",
+  "TAM": "2EA0",
+  "PA": "00",
+  "PMA": "58",
+  "VEL": "FFFF",
+}]
+
 const CardGrid: React.FC = () => {
+  
   const [sensores, setsensores] = useState<Sen[]>([]); // Almacena los datos de los vehículos
-  const [loading, setLoading] = useState(true);
+  
+  //se cambia el loading a fale por defecto para que se vea la carta
+  const [loading, setLoading] = useState(false);
+  
   const [error, setError] = useState<string | null>(null);
 
-  useEffect(() => {
-    fetchData();
-  }, []);
+  // useEffect(() => {
+  //   fetchData();
+  // }, []);
 
-  const fetchData = async () => {
-    try {
-      const response = await fetch("http://localhost:1880/data/sen"); // Ajustar la URL según tu backend
-      if (!response.ok) {
-        throw new Error("Error en la solicitud de la API");
-      }
-      const data: Sen[] = await response.json();
-      setsensores(data);
-      setLoading(false); // Los datos se cargaron con éxito
-    } catch (e) {
-      setError((e as Error).message);
-      setLoading(false);
-    }
-  };
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await fetch("http://localhost:1880/data/sen"); // Ajustar la URL según tu backend
+  //     if (!response.ok) {
+  //       throw new Error("Error en la solicitud de la API");
+  //     }
+  //     const data: Sen[] = await response.json();
+  //     setsensores(data);
+  //     setLoading(false); // Los datos se cargaron con éxito
+  //   } catch (e) {
+  //     setError((e as Error).message);
+  //     setLoading(false);
+  //   }
+  // };
 
   if (loading) {
     return (
@@ -69,8 +112,14 @@ const CardGrid: React.FC = () => {
   }
 
   // Obtener el año del primer vehículo para la primera tarjeta
-  const ultimoSen = sensores[0]; // Supone que hay al menos un vehículo en los datos
+  //Real que se recibe del fetch data
+  // const ultimoSen = sensores[0]; // Supone que hay al menos un vehículo en los datos
 
+  /* prueba json*/
+  const ultimoSen = senPrueba[0];
+
+  console.log({ultimoSen})
+  
   const levelSen = parseFloat((ultimoSen.Level / (10 * 3.785)).toFixed(2));
   const rpmSen =
     ultimoSen.RPM === "FFFF"
